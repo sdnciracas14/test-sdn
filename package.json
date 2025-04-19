@@ -1,0 +1,44 @@
+{
+  "name": "sdciracas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.8.0",
+    "@prisma/client": "^6.6.0",
+    "@tiptap/react": "^2.11.7",
+    "@tiptap/starter-kit": "^2.11.7",
+    "@vercel/blob": "^1.0.0",
+    "bcryptjs": "^3.0.2",
+    "next": "15.3.0",
+    "next-auth": "^5.0.0-beta.25",
+    "next-sitemap": "^4.2.3",
+    "react": "^19.0.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.0.0",
+    "react-fast-marquee": "^1.6.5",
+    "react-hook-form": "^7.55.0",
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
+    "swiper": "^11.2.6",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "9.24.0",
+    "eslint-config-next": "15.3.0",
+    "prisma": "^6.6.0",
+    "tailwindcss": "^4.1.3",
+    "typescript": "^5"
+  }
+}
