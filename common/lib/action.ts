@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { getArticleById } from "./data";
 import { editSchema, loginSchema, uploadSchema } from "./zodSchema";
-import { signIn, signOut } from "../service/auth";
+import { signIn } from "../service/auth";
 
 export const uploadArticle = async (prevState: unknown, formData: FormData) => {
   const validateFields = uploadSchema.safeParse(
@@ -125,12 +125,7 @@ export const login = async (prevState: unknown, formData: FormData) => {
     const result = await signIn("credentials", {
       email,
       password,
-      redirect: false,
     });
-
-    if (result?.error) {
-      throw new Error(result.error);
-    }
 
     return result;
   } catch (error) {
